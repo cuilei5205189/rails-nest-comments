@@ -1,5 +1,3 @@
 Recaptcha.configure do |config|
-  config.public_key  = ENV['RECAPTCHA_KEY']
-  config.private_key = ENV['RECAPTCHA_SECRET']
-  config.api_version = 'v2'
+  config.site_key  = '6Lddiv0cAAAAAFa3LQ6bvmWylIbfKnC01Ikm11Ch'
 end

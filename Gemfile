@@ -1,10 +1,12 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.1.9'
+gem 'rails', '4.2.8'
+gem 'sqlite3', '~> 1.3', '< 1.4'
+
 
 group :development do
-  gem 'sqlite3'
+  gem 'sqlite3', '~> 1.3', '< 1.4'
   gem 'annotate'
   gem 'better_errors'
   gem "binding_of_caller"

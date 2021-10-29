@@ -13,7 +13,7 @@
 
 ActiveRecord::Schema.define(version: 20140408133956) do
 
-  create_table "comment_hierarchies", id: false, force: true do |t|
+  create_table "comment_hierarchies", id: false, force: :cascade do |t|
     t.integer "ancestor_id",   null: false
     t.integer "descendant_id", null: false
     t.integer "generations",   null: false
@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 20140408133956) do
   add_index "comment_hierarchies", ["ancestor_id", "descendant_id", "generations"], name: "tag_anc_desc_udx", unique: true
   add_index "comment_hierarchies", ["descendant_id"], name: "tag_desc_idx"
 
-  create_table "comments", force: true do |t|
+  create_table "comments", force: :cascade do |t|
     t.string   "title"
     t.string   "author"
     t.text     "body"
